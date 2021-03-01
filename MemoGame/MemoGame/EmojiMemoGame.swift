@@ -7,8 +7,8 @@
 
 import Foundation
 
-class EmojiMemoGame {
-    private var game: MemoGame<String> = EmojiMemoGame.createMemoGame()
+class EmojiMemoGame: ObservableObject {
+    @Published private var game: MemoGame<String> = EmojiMemoGame.createMemoGame()
     
     
     
