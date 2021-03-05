@@ -16,6 +16,7 @@
 		27DDB9A325F2B3B7003E0952 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDB9A225F2B3B7003E0952 /* Grid.swift */; };
 		27DDB9A625F2B9FD003E0952 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDB9A525F2B9FD003E0952 /* GridLayout.swift */; };
 		27DDB9A925F2C6CB003E0952 /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDB9A825F2C6CB003E0952 /* Array+Identifiable.swift */; };
+		27DDB9AC25F2D16C003E0952 /* Array+Only.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDB9AB25F2D16C003E0952 /* Array+Only.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		27DDB9A225F2B3B7003E0952 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		27DDB9A525F2B9FD003E0952 /* GridLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		27DDB9A825F2C6CB003E0952 /* Array+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = "<group>"; };
+		27DDB9AB25F2D16C003E0952 /* Array+Only.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Only.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				27DDB9A825F2C6CB003E0952 /* Array+Identifiable.swift */,
 				27DDB9A525F2B9FD003E0952 /* GridLayout.swift */,
 				277721BE25E8F8D300C7B657 /* MemoGame.swift */,
+				27DDB9AB25F2D16C003E0952 /* Array+Only.swift */,
 				277721C125E8FA7D00C7B657 /* EmojiMemoGame.swift */,
 				275CDE5725E8E67600EF3B61 /* Assets.xcassets */,
 				275CDE5C25E8E67600EF3B61 /* Info.plist */,
@@ -160,6 +163,7 @@
 				27DDB9A325F2B3B7003E0952 /* Grid.swift in Sources */,
 				27DDB9A925F2C6CB003E0952 /* Array+Identifiable.swift in Sources */,
 				277721BF25E8F8D300C7B657 /* MemoGame.swift in Sources */,
+				27DDB9AC25F2D16C003E0952 /* Array+Only.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
