@@ -12,10 +12,10 @@ struct EmojiMemoGameView: View {
     @ObservedObject var viewModel: EmojiMemoGame
     var body: some View {
         Grid(viewModel.cards)  { card in
-                CardView(card: card).onTapGesture {
-                    viewModel.choose(card: card)
-                }
-                .padding(5)
+            CardView(card: card).onTapGesture {
+                viewModel.choose(card: card)
+            }
+            .padding(5)
         }
         .foregroundColor(.purple)
         .padding()
@@ -35,27 +35,20 @@ struct CardView: View {
         }
     }
     
-        private func body (for size: CGSize) -> some View {
+    @ViewBuilder
+    private func body (for size: CGSize) -> some View {
+        if card.isFaceUp || !card.isMatched {
             ZStack {
-                if card.isFaceUp {
-                    RoundedRectangle(cornerRadius: cornerRadius).fill(Color.white)
-                    RoundedRectangle(cornerRadius: cornerRadius).stroke(lineWidth: edgeLineWidth)
-                    Pie(startAngle: Angle.degrees(0-90), endAngle: Angle.degrees(120-90)).padding(5).opacity(0.4)
-                    Text(card.content)
-                } else {
-                    if !card.isMatched{
-                        RoundedRectangle(cornerRadius: cornerRadius).fill()
-                    }
-                }
+                Pie(startAngle: Angle.degrees(0-90), endAngle: Angle.degrees(120-90)).padding(5).opacity(0.4)
+                Text(card.content)
+                    .font(Font.system(size: fontSize(for: size)))
             }
-            .font(Font.system(size: fontSize(for: size)))
+            .cardify(isFaceUp: card.isFaceUp)
         }
+    }
     
     
     //MARK: -Drawing Constants
-    private let cornerRadius: CGFloat = 10.0
-    private let edgeLineWidth: CGFloat = 3
-    
     private func fontSize (for size: CGSize) -> CGFloat {
         min(size.width , size.height) * 0.7
     }
