@@ -14,7 +14,9 @@ struct EmojiMemoGameView: View {
         VStack {
             Grid(viewModel.cards)  { card in
                 CardView(card: card).onTapGesture {
-                    viewModel.choose(card: card)
+                    withAnimation(.linear) {
+                        viewModel.choose(card: card)
+                    }
                 }
                 .padding(5)
             }
@@ -53,6 +55,11 @@ struct CardView: View {
                     .animation(card.isMatched ? Animation.linear(duration: 1).repeatForever(autoreverses: false) : .default)
             }
             .cardify(isFaceUp: card.isFaceUp)
+            .transition(.scale)
+            .rotation3DEffect(
+                Angle.degrees(card.isFaceUp ? 0 : 180),
+                axis: (x: 0.0, y: 1.0, z: 0.0)
+            )
         }
     }
     
