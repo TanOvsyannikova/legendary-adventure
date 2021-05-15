@@ -56,10 +56,6 @@ struct CardView: View {
             }
             .cardify(isFaceUp: card.isFaceUp)
             .transition(.scale)
-            .rotation3DEffect(
-                Angle.degrees(card.isFaceUp ? 0 : 180),
-                axis: (x: 0.0, y: 1.0, z: 0.0)
-            )
         }
     }
     
